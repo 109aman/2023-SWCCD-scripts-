@@ -1,0 +1,10 @@
+#!/bin/bash
+#will require someone to change the home directory
+#do note that this does NOT change the config for snort only import list to rules direcotry and is run AFTER snort is installed 
+wget https://rules.emergingthreats.net/open/snort-$version/emerging.rules.tar.gz
+echo"files downloaded"
+sudo tar -xvf emerging.rules.tar.gz
+echo"files extracted"
+sudo cp -r  /home/kali/Desktop/rules/. /etc/snort/rules
+#https://wiki.ipfire.org/configuration/firewall/ips/rulesets
+#https://doc.emergingthreats.net/
